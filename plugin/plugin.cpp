@@ -17,8 +17,8 @@ namespace
     {
         DbBackendDriver driver;
         driver.create = &CreateMySQLBackend;
-        // sql files go through the mysql program shipped next to this library (MySQLExecutable)
-        driver.caps = { 0, true, true, true };
+        // sql files are applied over the connection (MySQLScriptTarget), not by the mysql program
+        driver.caps = { 0, true, true, false };
         driver.init = &MySQLLibrary::Init;
         driver.end = &MySQLLibrary::End;
         driver.version = &MySQLLibrary::Version;

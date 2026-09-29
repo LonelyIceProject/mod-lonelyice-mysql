@@ -21,9 +21,9 @@ The plugin declares this in `plugin.json` (`storage`, see LonelyIce's `docs/plug
 
 The MySQL backend of [LonelyIceProject/azerothcore-wotlk](https://github.com/LonelyIceProject/azerothcore-wotlk)
 compiled as a plugin: its library registers the `mysql` database backend while the scripts load, before the
-databases are opened, so `mysql:` connection strings work in a core built with `-DWITH_MYSQL=OFF`. The MySQL
-client library and the `mysql` program (the core applies SQL files with it, see `MySQLExecutable`) are shipped
-next to the plugin library.
+databases are opened, so `mysql:` connection strings work in a core built with `-DWITH_MYSQL=OFF`. SQL files are
+applied over the backend's own connection (`MySQLScriptTarget`), so no `mysql` program is started and nothing
+opens a console window. The MySQL client library is shipped next to the plugin library.
 
 ## Build
 

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "id": "lonelyice.mysql",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "name": { "en": "MySQL database", "ru": "База данных MySQL" },
   "description": {
     "en": "Lets the server keep its databases on a MySQL 8 server, local or on another machine, instead of the built-in files.",
@@ -16,8 +16,7 @@
   "storage": {
     "id": "mysql",
     "name": { "en": "MySQL server", "ru": "Сервер MySQL", "de": "MySQL-Server", "fr": "serveur MySQL", "es": "servidor MySQL" },
-    "port": 3306,
-    "config": { "MySQLExecutable": "{bin}/mysql{exe}" }
+    "port": 3306
   },
   "server": { "library": "lonelyice_mysql" }
 }
