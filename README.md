@@ -7,11 +7,15 @@ another one, instead of the built-in (SQLite) files.
 
 ## Use with LonelyIce
 
-Install the plugin from the catalog, then open Maintenance → Server data, fill in the MySQL server, user,
-password and database prefix, and choose "Use MySQL". LonelyIce creates the databases that are missing there
+Install the plugin from the catalog (or have it installed before the first run). "MySQL server" then appears
+next to the hard drive wherever LonelyIce asks where to keep the data: in the setup wizard and in Settings →
+Storage (the gear of the plugin opens it). Fill in the server, port, user, password and database prefix;
+LonelyIce checks the server right away. On Apply it creates the databases that are missing there
 (`<prefix>auth`, `<prefix>characters`, `<prefix>world`, `<prefix>playerbots`; the user needs the right to create
 databases), brings existing ones up to date and unpacks the client's tables into the world database. The
-built-in databases stay as they are; "Back to built-in" returns to them.
+built-in databases stay as they are; choosing the hard drive again returns to them.
+
+The plugin declares this in `plugin.json` (`storage`, see LonelyIce's `docs/plugin-format.md`).
 
 ## What it is
 
