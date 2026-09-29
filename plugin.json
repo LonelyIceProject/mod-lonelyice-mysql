@@ -1,7 +1,7 @@
 {
   "format": 1,
   "id": "lonelyice.mysql",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": { "en": "MySQL database", "ru": "База данных MySQL" },
   "description": {
     "en": "Lets the server keep its databases on a MySQL 8 server, local or on another machine, instead of the built-in files.",
@@ -10,7 +10,7 @@
   "authors": [ "LonelyIceProject" ],
   "license": "GPL-2.0-or-later",
   "homepage": "https://github.com/LonelyIceProject/mod-lonelyice-mysql",
-  "core": { "abi": "lonelyice-ac-1" },
+  "core": { "abi": "lonelyice-ac-2" },
   "platforms": [ "windows-x64" ],
   "provides": [ "database:mysql" ],
   "storage": {
@@ -18,5 +18,5 @@
     "name": { "en": "MySQL server", "ru": "Сервер MySQL", "de": "MySQL-Server", "fr": "serveur MySQL", "es": "servidor MySQL" },
     "port": 3306
   },
-  "server": { "library": "lonelyice_mysql" }
+  "server": { "library": "lonelyice_mysql", "apps": [ "worldserver", "authserver", "dbimport" ] }
 }

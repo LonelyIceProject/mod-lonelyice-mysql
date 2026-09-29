@@ -11,14 +11,12 @@
 
 namespace
 {
-    // The core's MySQL backend, built into this library instead of the core. Registered while the scripts load,
-    // which is before the databases are opened.
+    // Registered as soon as the library loads, in every program that opens the databases (server.apps).
     void AddMySQLBackend()
     {
         DbBackendDriver driver;
         driver.create = &CreateMySQLBackend;
-        // sql files are applied over the connection (MySQLScriptTarget), not by the mysql program
-        driver.caps = { 0, true, true, false };
+        driver.caps = { 0, true, true };
         driver.init = &MySQLLibrary::Init;
         driver.end = &MySQLLibrary::End;
         driver.version = &MySQLLibrary::Version;
@@ -26,4 +24,4 @@ namespace
     }
 }
 
-AC_PLUGIN(AddMySQLBackend)
+AC_PLUGIN_ON_LOAD(AddMySQLBackend)
