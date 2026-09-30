@@ -46,6 +46,13 @@ With the core built as shared libraries (`-DWITH_DYNAMIC_LINKING=ON`) this gives
 `bin/<config>/plugins/lonelyice.mysql/`. Without shared libraries the backend is built into worldserver,
 authserver and dbimport, and the client library is copied next to them. Without MySQL 8 the plugin is skipped.
 
+## Support
+
+LonelyIce is free, with no ads and no paid features. If it is useful to you, you can
+[buy me a coffee](https://buymeacoffee.com/darthgelum): it pays for the server, code signing and development time.
+
+<a href="https://buymeacoffee.com/darthgelum"><img src=".github/buy-me-a-coffee.png" alt="Buy me a coffee" width="303"></a>
+
 ## License
 
 GPL-2.0-or-later, see [LICENSE](LICENSE). MySQL client components are GPL-2.0 (Oracle's FOSS exception applies).
